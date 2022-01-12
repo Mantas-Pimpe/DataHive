@@ -1,0 +1,105 @@
+<html dir="ltr" lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    body, html {
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        display: flex;
+        background: #fed22b; /* fallback for old browsers */
+        background: linear-gradient(to top, #fed22b, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        color: black;
+        max-height: 600px;
+        min-height: 160px;
+        width: 180px;
+        overflow-x: hidden;
+        padding: 0.5em;
+    }
+    
+    body {
+        font: "Trebuchet MS";
+        font-size: 12;
+    
+    }
+    
+    .siteselector {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        padding-bottom: 1em;
+        padding-top: 0.5em;
+    }
+    
+    .button-1 {
+      background-color: #FF9729;
+      border-radius: 8px;
+      border-style: none;
+      box-sizing: border-box;
+      color: #FFFFFF;
+      cursor: pointer;
+      display: inline-block;
+      font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      height: 40px;
+      line-height: 20px;
+      list-style: none;
+      margin: 0;
+      outline: none;
+      padding: 10px 16px;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      transition: color 100ms;
+      vertical-align: baseline;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+    }
+    
+    .button-1:hover,
+    .button-1:focus {
+      background-color: #FF6314;
+    }
+    
+    </style>
+    </head>
+    <body>
+        <p style="text-align:center; position: relative; bottom: -4px;"><img src='logo_with_text.png' id='full_logo' height="63" width="170"></p>
+        <div class="container" >
+            <div>
+                <div>
+                    <b>Cookie request handling failure?</b>
+                </div>
+                <br>
+                <div style="text-align:center;">
+                    <button class="button-1" id="unhandled">Report failure</button>
+                </div>
+                <br>
+                
+                <div>
+                    <b>Keep running on this site?</b>
+                </div>
+                
+                <div class="siteselector">
+                  <input type="checkbox" checked>
+                  <span id="site" class="checkmark"></span>
+                </div>
+                
+                <div style="text-align:center;">
+                    <button class="button-1" id="history">Cookie history</button>
+                </div>
+                <br>
+                
+                <div style="text-align:center;">
+                    <button class="button-1" id="settings">Configure Tracking</button>
+                </div>
+         </div>
+            <div>
+            </div>
+            <script src="GDPRConfig.js"></script>
+            <script src="popup.js"></script>
+        </div>
+    </body>
+    </html>
+    

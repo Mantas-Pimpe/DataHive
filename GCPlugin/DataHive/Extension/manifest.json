@@ -1,0 +1,43 @@
+{
+	"name": "DataHive",
+	"description": "BDAR užklausų valdymo įrankis",
+	"author": "Mantas Pimpė",
+	"version": "1.0.0",
+	"manifest_version": 2,
+	"permissions": [ "activeTab", "storage", "browsingData" ],
+	"browser_action": {
+		"default_title": "DataHive",
+		"default_popup": "popup.html"
+	},
+	"background": {
+		"scripts": [ "GDPRConfig.js", "background.js" ],
+		"persistent": false
+	},
+	"content_scripts": [
+		{
+			"matches": [ "<all_urls>" ],
+			"js": [
+				"Tools.js",
+				"GDPRConfig.js",
+				"Matcher.js",
+				"Consent.js",
+				"Action.js",
+				"Detector.js",
+				"CMP.js",
+				"ConsentEngine.js",
+				"contentScript.js"
+			],
+			"css": [ "content.css" ],
+			"all_frames": true
+		}
+	],
+	"options_ui": {
+		"page": "options.html",
+		"open_in_tab": true
+	},
+	"icons": {
+		"32": "beehive_32.png",
+		"64": "beehive_64.png",
+		"128": "beehive_128.png"
+	}
+}
